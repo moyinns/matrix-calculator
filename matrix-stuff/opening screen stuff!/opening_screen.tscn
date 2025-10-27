@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0gltri31qob0"]
+
+[ext_resource type="Texture2D" uid="uid://bvirj4vjyifah" path="res://opening screen stuff!/opening screen.PNG" id="1_0xuub"]
+[ext_resource type="Script" uid="uid://ds6s1150ic0s8" path="res://opening screen stuff!/button.gd" id="1_f7e8i"]
+
+[node name="opening screen" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -25.0
+offset_top = -11.0
+offset_right = 1175.0
+offset_bottom = 664.0
+texture = ExtResource("1_0xuub")
+
+[node name="play button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 384.0
+offset_top = 335.0
+offset_right = 791.0
+offset_bottom = 430.0
+script = ExtResource("1_f7e8i")
+
+[node name="quit button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 384.0
+offset_top = 453.0
+offset_right = 792.0
+offset_bottom = 544.0
+script = ExtResource("1_f7e8i")
+
+[connection signal="pressed" from="play button" to="play button" method="_on_play_pressed"]
+[connection signal="pressed" from="quit button" to="quit button" method="_on_pressed"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsfd8axl4rvoa"]
+
+[ext_resource type="Texture2D" uid="uid://btd1j43cfn0ku" path="res://enter matric screen stuff!/confirm enter matrix screen.PNG" id="1_3xt58"]
+[ext_resource type="Script" uid="uid://3rdw3oynsqe5" path="res://enter matric screen stuff!/confirm_enter_matrix_screen.gd" id="1_f8mwu"]
+[ext_resource type="FontFile" uid="uid://8ne8d5aawmql" path="res://enter matric screen stuff!/kindergarten.ttf" id="3_n13df"]
+
+[node name="confirm_enter_matrix_screen" type="Node2D"]
+script = ExtResource("1_f8mwu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -27.0
+offset_top = -11.0
+offset_right = 1173.0
+offset_bottom = 664.0
+texture = ExtResource("1_3xt58")
+
+[node name="confirm button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 607.0
+offset_top = 271.0
+offset_right = 1050.0
+offset_bottom = 369.0
+
+[node name="redo button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 608.0
+offset_top = 392.0
+offset_right = 1051.0
+offset_bottom = 490.0
+
+[node name="matrix label" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 270.0
+offset_right = 366.0
+offset_bottom = 482.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.7764706, 0.6117647, 0.5803922, 1)
+theme_override_colors/font_outline_color = Color(0.7764706, 0.6117647, 0.5803922, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_n13df")
+theme_override_font_sizes/font_size = 80
+
+[connection signal="pressed" from="confirm button" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="redo button" to="." method="_on_redo_button_pressed"]

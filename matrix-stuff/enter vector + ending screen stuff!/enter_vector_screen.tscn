@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxd2brwvpv4sj"]
+
+[ext_resource type="Script" uid="uid://b5n2p2qunmde0" path="res://enter vector + ending screen stuff!/enter_vector_screen.gd" id="1_a32f3"]
+[ext_resource type="Texture2D" uid="uid://dxh4opgiq8ue1" path="res://enter vector + ending screen stuff!/enter vector screen.PNG" id="1_nir2e"]
+[ext_resource type="FontFile" uid="uid://8ne8d5aawmql" path="res://enter matric screen stuff!/kindergarten.ttf" id="3_2t1si"]
+
+[node name="enter_vector_screen" type="Node2D"]
+script = ExtResource("1_a32f3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -28.0
+offset_top = -12.0
+offset_right = 1172.0
+offset_bottom = 663.0
+texture = ExtResource("1_nir2e")
+
+[node name="input_x" type="LineEdit" parent="."]
+offset_left = 622.0
+offset_top = 308.0
+offset_right = 938.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0.8352941, 0.6117647, 0.6431373, 1)
+theme_override_fonts/font = ExtResource("3_2t1si")
+theme_override_font_sizes/font_size = 24
+flat = true
+
+[node name="input_y" type="LineEdit" parent="."]
+offset_left = 622.0
+offset_top = 388.0
+offset_right = 938.0
+offset_bottom = 428.0
+theme_override_colors/font_color = Color(0.8352941, 0.6117647, 0.6431373, 1)
+theme_override_fonts/font = ExtResource("3_2t1si")
+theme_override_font_sizes/font_size = 24
+flat = true
+
+[connection signal="text_submitted" from="input_y" to="." method="_on_input_y_text_submitted"]
